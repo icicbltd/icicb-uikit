@@ -13,7 +13,7 @@ import * as IconModule from "./icons";
 import { socials, MENU_ENTRY_HEIGHT } from "./config";
 import { PanelProps, PushedProps } from "./types";
 
-interface Props extends PanelProps, PushedProps {}
+interface Props extends PanelProps, PushedProps { }
 
 const Icons = (IconModule as unknown) as { [key: string]: React.FC<SvgProps> };
 const { MoonIcon, SunIcon, LanguageIcon } = Icons;
@@ -86,42 +86,45 @@ const PanelFooter: React.FC<Props> = ({
         ) : (
           <Skeleton width={80} height={24} />
         )}
-        <Flex>
+        {/* <Flex>
           {socials.map((social, index) => {
             const Icon = Icons[social.icon];
             const iconProps = { width: "24px", color: "textSubtle", style: { cursor: "pointer" } };
             const mr = index < socials.length - 1 ? "8px" : 0;
-            if (social.items) {
-              return (
-                <Dropdown key={social.label} position="top" target={<Icon {...iconProps} mr={mr} />}>
-                  {social.items.map((item) => (
-                    <Link external key={item.label} href={item.href} aria-label={item.label} color="textSubtle">
-                      {item.label}
-                    </Link>
-                  ))}
-                </Dropdown>
-              );
-            }
+            // if (social.items) {
+            //   return (
+            //     <Dropdown key={social.label} position="top" target={<Icon {...iconProps} mr={mr} />}>
+            //       {social.items.map((item) => (
+            //         <Link external key={item.label} href={item.href} aria-label={item.label} color="textSubtle">
+            //           {item.label}
+            //         </Link>
+            //       ))}
+            //     </Dropdown>
+            //   );
+            // }
             return (
               <Link external key={social.label} href={social.href} aria-label={social.label} mr={mr}>
                 <Icon {...iconProps} />
               </Link>
             );
           })}
-        </Flex>
+        </Flex> */}
       </SocialEntry>
       <SettingsEntry>
-        <Button variant="text" onClick={() => toggleTheme(!isDark)}>
+        {/* <Button variant="text" onClick={() => toggleTheme(!isDark)}> */}
           {/* alignItems center is a Safari fix */}
-          <Flex alignItems="center">
+          {/* <Flex alignItems="center">
             <SunIcon color={isDark ? "textDisabled" : "text"} width="24px" />
             <Text color="textDisabled" mx="4px">
               /
             </Text>
             <MoonIcon color={isDark ? "text" : "textDisabled"} width="24px" />
           </Flex>
+        </Button> */}
+        <Button variant="text" startIcon={<LanguageIcon color="textSubtle" width="24px" />}>
+          <Text color="textSubtle">{currentLang?.toUpperCase()}</Text>
         </Button>
-        <Dropdown
+        {/* <Dropdown
           position="top-right"
           target={
             <Button variant="text" startIcon={<LanguageIcon color="textSubtle" width="24px" />}>
@@ -140,7 +143,7 @@ const PanelFooter: React.FC<Props> = ({
               {lang.language}
             </MenuButton>
           ))}
-        </Dropdown>
+        </Dropdown> */}
       </SettingsEntry>
     </Container>
   );

@@ -32,14 +32,14 @@ export const light: ButtonTheme = {
     borderColorHover: "currentColor",
     boxShadow: "none",
     boxShadowActive: "none",
-    color: lightColors.primary,
+    color: lightColors.text,
   },
   [TEXT]: {
     background: "transparent",
     backgroundActive: "transparent",
     backgroundHover: lightColors.tertiary,
     border: 0,
-    borderColorHover: "currentColor",
+    borderColorHover: "white",
     boxShadow: "none",
     boxShadowActive: "none",
     color: lightColors.primary,
@@ -79,6 +79,14 @@ export const light: ButtonTheme = {
 export const dark: ButtonTheme = {
   [PRIMARY]: {
     ...light.primary,
+    background: darkColors.third,
+    backgroundActive: darkColors.thirdDark,
+    backgroundHover: darkColors.thirdBright,
+    border: 0,
+    borderColorHover: "currentColor",
+    boxShadow: "inset 0px -1px 0px rgba(14, 14, 44, 0.4)",
+    boxShadowActive: "inset 0px -1px 0px rgba(14, 14, 44, 0.4)",
+    color: darkColors.card,
   },
   [SECONDARY]: {
     ...light.secondary,
@@ -88,11 +96,11 @@ export const dark: ButtonTheme = {
     background: darkColors.tertiary,
     backgroundActive: darkColors.tertiary,
     backgroundHover: darkColors.tertiary,
-    color: darkColors.primary,
+    color: darkColors.text,
   },
   [TEXT]: {
     ...light.text,
-    backgroundHover: darkColors.tertiary,
+    backgroundHover: darkColors.third,
   },
   [DANGER]: {
     ...light.danger,
