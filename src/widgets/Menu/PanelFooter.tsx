@@ -112,8 +112,8 @@ const PanelFooter: React.FC<Props> = ({
       </SocialEntry>
       <SettingsEntry>
         {/* <Button variant="text" onClick={() => toggleTheme(!isDark)}> */}
-          {/* alignItems center is a Safari fix */}
-          {/* <Flex alignItems="center">
+        {/* alignItems center is a Safari fix */}
+        {/* <Flex alignItems="center">
             <SunIcon color={isDark ? "textDisabled" : "text"} width="24px" />
             <Text color="textDisabled" mx="4px">
               /
@@ -122,7 +122,8 @@ const PanelFooter: React.FC<Props> = ({
           </Flex>
         </Button> */}
         <Button variant="text" startIcon={<LanguageIcon color="textSubtle" width="24px" />}>
-          <Text color="textSubtle">{currentLang?.toUpperCase()}</Text>
+          <Text color="textSubtle">EN</Text>
+          {/* {currentLang?.toUpperCase()} */}
         </Button>
         {/* <Dropdown
           position="top-right"

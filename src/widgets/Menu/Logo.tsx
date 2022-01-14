@@ -23,7 +23,6 @@ const StyledLink = styled(Link)`
     }
   }
   .desktop-icon {
-    width: 156px;
     display: none;
     ${({ theme }) => theme.mediaQueries.nav} {
       display: block;
@@ -36,19 +35,12 @@ const Logo: React.FC<Props> = ({ isPushed, togglePush, isDark, href }) => {
 	const innerLogo = (
 		<>
 			<LogoIcon className="mobile-icon" />
-			<LogoWithText className="desktop-icon" isDark={isDark} />
+			<LogoWithText className="desktop-icon" isDark={isDark} width="400px" />
 		</>
 	);
 
 	return (
 		<Flex>
-			<MenuButton aria-label="Toggle menu" onClick={togglePush} mr="24px">
-				{isPushed ? (
-					<HamburgerCloseIcon width="24px" color="textSubtle" />
-				) : (
-					<HamburgerIcon width="24px" color="textSubtle" />
-				)}
-			</MenuButton>
 			{isPushed ? (
 				<StyledLink to={href} aria-label="Icicb home page">
 					{innerLogo}
