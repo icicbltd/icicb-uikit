@@ -17,16 +17,16 @@ const connectors: Config[] = [
     icon: TrustWallet,
     connectorId: "injected",
   },
-  {
-    title: "MathWallet",
-    icon: MathWallet,
-    connectorId: "injected",
-  },
-  {
-    title: "TokenPocket",
-    icon: TokenPocket,
-    connectorId: "injected",
-  },
+  // {
+  //   title: "MathWallet",
+  //   icon: MathWallet,
+  //   connectorId: "injected",
+  // },
+  // {
+  //   title: "TokenPocket",
+  //   icon: TokenPocket,
+  //   connectorId: "injected",
+  // },
   {
     title: "WalletConnect",
     icon: WalletConnect,
