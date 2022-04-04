@@ -15,7 +15,7 @@ const UserBlock: React.FC<Props> = ({ account, login, logout }) => {
   return (
     <div>
       {account ? (
-        <Button
+        <Button style={{borderRadius:"50px",backgroundColor:"transparent",color:"white",border:"1px solid #a48957"}}
           size="md"
           variant="tertiary"
           onClick={() => {
@@ -25,7 +25,7 @@ const UserBlock: React.FC<Props> = ({ account, login, logout }) => {
           {accountEllipsis}
         </Button>
       ) : (
-        <Button
+        <Button style={{borderRadius:"50px",backgroundColor:"transparent",color:"white",border:"1px solid #a48957"}}
           size="md"
           onClick={() => {
             onPresentConnectModal();

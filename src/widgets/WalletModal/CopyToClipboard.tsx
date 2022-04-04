@@ -10,8 +10,8 @@ interface Props {
 const StyleButton = styled(Text).attrs({ role: "button" })`
   position: relative;
   display: flex;
+  color:#D0B49F;
   align-items: center;
-  color: ${({ theme }) => theme.colors.primary};
 `;
 
 const Tooltip = styled.div<{ isTooltipDisplayed: boolean }>`
@@ -21,8 +21,8 @@ const Tooltip = styled.div<{ isTooltipDisplayed: boolean }>`
   right: 0;
   left: 0;
   text-align: center;
-  background-color: ${({ theme }) => theme.colors.contrast};
-  color: ${({ theme }) => theme.colors.invertedContrast};
+  background-color: #091c2c;
+  color: #D0B49F;
   border-radius: 16px;
   opacity: 0.7;
 `;
@@ -46,7 +46,7 @@ const CopyToClipboard: React.FC<Props> = ({ toCopy, children, ...props }) => {
       {...props}
     >
       {children}
-      <CopyIcon width="20px" color="primary" ml="4px" />
+      <CopyIcon width="20px" color="white" ml="4px" />
       <Tooltip isTooltipDisplayed={isTooltipDisplayed}>Copied</Tooltip>
     </StyleButton>
   );

@@ -19,10 +19,10 @@ const getDisabledStyles = ({ isLoading, theme }: ThemedProps) => {
   return `
     &:disabled,
     &.button--disabled {
-      background-color: ${theme.colors.backgroundDisabled};
-      border-color: ${theme.colors.backgroundDisabled};
+      background-color: transparent;
+      border-color: 1px solid #D0B49F;
       box-shadow: none;
-      color: ${theme.colors.textDisabled};
+      color: #D0B49F;
       cursor: not-allowed;
     }
   `;
@@ -47,11 +47,9 @@ const getButtonVariantProp = (prop: keyof ButtonThemeVariant) => ({
 
 const StyledButton = styled.button<ButtonProps>`
   align-items: center;
-  background-color: ${getButtonVariantProp("background")};
-  border: ${getButtonVariantProp("border")};
-  border-radius: 2px;
+  border:2px solid #D0B49F;
+  border-radius: 20px;
   box-shadow: ${getButtonVariantProp("boxShadow")};
-  color: ${getButtonVariantProp("color")};
   cursor: pointer;
   display: inline-flex;
   font-family: inherit;
@@ -67,21 +65,27 @@ const StyledButton = styled.button<ButtonProps>`
   padding: ${({ size }) => (size === "sm" ? "0 16px" : "0 24px")};
   transition: background-color 0.2s;
   opacity: ${({ isLoading }) => (isLoading ? 0.5 : 1)};
+  background-color: #090805;
+  color:#D0B49F;
 
   &:hover:not(:disabled):not(.button--disabled):not(:active) {
-    border-radius: 2px;
-    background-color: ${getButtonVariantProp("backgroundHover")};
+    border-radius: 20px;
+    background-color: #D0B49F;
+    color:black;
     border-color: ${getButtonVariantProp("borderColorHover")};
   }
 
   &:focus:not(:active) {
-    border-radius: 2px;
+    background-color: #090805;
+    color:#D0B49F;
+    border-radius: 20px;
     box-shadow: 0 0 0 2px ${({ theme }) => theme.colors.secondary};
   }
 
   &:active {
-    border-radius: 2px;
-    background-color: ${getButtonVariantProp("backgroundActive")};
+    border-radius: 20px;
+    background-color: #D0B49F;
+    color:#090805;
     box-shadow: ${getButtonVariantProp("boxShadowActive")};
   }
 

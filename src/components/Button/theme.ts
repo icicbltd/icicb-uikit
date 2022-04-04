@@ -39,10 +39,10 @@ export const light: ButtonTheme = {
     backgroundActive: "transparent",
     backgroundHover: lightColors.tertiary,
     border: 0,
-    borderColorHover: "white",
+    borderColorHover: "#D0B49F",
     boxShadow: "none",
     boxShadowActive: "none",
-    color: lightColors.primary,
+    color: "white",
   },
   [DANGER]: {
     background: lightColors.failure,

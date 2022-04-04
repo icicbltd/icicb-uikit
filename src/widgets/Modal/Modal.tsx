@@ -61,7 +61,7 @@ const Modal: React.FC<Props> = ({
       </ModalTitle>
       {!hideCloseButton && (
         <IconButton variant="tertiary" onClick={onDismiss} aria-label="Close the dialog">
-          <CloseIcon color="third" />
+          <CloseIcon color="thirdBright" />
         </IconButton>
       )}
     </ModalHeader>
