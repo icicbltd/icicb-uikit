@@ -25,7 +25,7 @@ const UserBlock: React.FC<Props> = ({ account, login, logout }) => {
           {accountEllipsis}
         </Button>
       ) : (
-        <Button style={{borderRadius:"50px",backgroundColor:"transparent",color:"white",border:"1px solid #a48957"}}
+        <Button
           size="md"
           onClick={() => {
             onPresentConnectModal();

@@ -2440,7 +2440,7 @@ var WalletCard = function (_a) {
             window.localStorage.setItem(localStorageKey, "1");
             onDismiss();
         }, style: { justifyContent: "space-between" }, mb: mb, id: "wallet-connect-".concat(title.toLocaleLowerCase()) },
-        React__default["default"].createElement(Text, { bold: true, color: "third", mr: "16px" }, title),
+        React__default["default"].createElement(Text, { bold: true, mr: "16px" }, title),
         React__default["default"].createElement(Icon, { width: "32px" })));
 };
 
@@ -2502,7 +2502,7 @@ var UserBlock = function (_a) {
     var accountEllipsis = account ? "".concat(account.substring(0, 4), "...").concat(account.substring(account.length - 4)) : null;
     return (React__default["default"].createElement("div", null, account ? (React__default["default"].createElement(Button, { style: { borderRadius: "50px", backgroundColor: "transparent", color: "white", border: "1px solid #a48957" }, size: "md", variant: "tertiary", onClick: function () {
             onPresentAccountModal();
-        } }, accountEllipsis)) : (React__default["default"].createElement(Button, { style: { borderRadius: "50px", backgroundColor: "transparent", color: "white", border: "1px solid #a48957" }, size: "md", onClick: function () {
+        } }, accountEllipsis)) : (React__default["default"].createElement(Button, { size: "md", onClick: function () {
             onPresentConnectModal();
         } }, "Connect"))));
 };
